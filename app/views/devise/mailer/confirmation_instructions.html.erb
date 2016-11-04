@@ -1,0 +1,18 @@
+<tr>
+    <td class="content-block">
+        <h3>Welcome <%= @email %>!</h3>
+    </td>
+</tr>
+<tr>
+    <td class="content-block">
+        You can confirm your account email through the link below:
+    </td>
+</tr>
+
+<tr>
+    <td class="content-block aligncenter">
+        <a href="<%= confirmation_url(@resource, confirmation_token: @token) %>" class="btn-primary">
+        	Confirm email address
+        </a>
+    </td>
+</tr>

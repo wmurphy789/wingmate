@@ -1,0 +1,13 @@
+<li class="dropdown <%= 'active' if active %>">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		<%= label %> 
+		<span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu">
+
+		<% if content_for? dropdown_key %>
+			<%= yield dropdown_key %> 
+		<% end %>
+
+	</ul>
+</li>

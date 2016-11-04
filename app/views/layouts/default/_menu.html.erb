@@ -1,0 +1,14 @@
+<ul id="header-menu" class="nav navbar-nav">
+	<%= menu_item label: 'Home', url: root_path, active: on_home? %> 	
+
+
+	<% if current_user %>
+		<%= menu_group label: 'Admin', active: on_admin_controller?, hidden: !current_user.is_admin? do %>
+			<%= menu_item label: 'Users',  url: admin_users_path %> 
+			<%= menu_item label: 'Categories', url: admin_categories_path %> 
+			<%= menu_item label: 'Providers', url: admin_providers_path %> 
+		<% end %>
+	<% end %>
+
+	<%= menu_item label: 'Sign Out', url: destroy_user_session_path, hidden: !user_signed_in? %> 	
+</ul>

@@ -1,0 +1,11 @@
+$padding: 20px;
+
+.layout.layout-default {
+	
+	padding-top: $padding;
+	padding-bottom: $padding;
+
+	#main-content {
+		margin-bottom: 60px; // footer height
+	}
+}
